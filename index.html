@@ -1,407 +1,925 @@
 <!DOCTYPE html>
-<html>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N908Q7Q52"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!--[if IE 8 ]>
+<html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 
-  gtag('config', 'G-7N908Q7Q52');
-</script>
-     <head><title>Wendy's MHI1001 page</title></head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Lato", sans-serif;
-    }
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Jingyi (Wendy) Jiang's Website</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    body,
-    html {
-        height: 100%;
-        color: #777;
-        line-height: 1.8;
-    }
-    /* Create a Parallax Effect */
-    .bgimg-1,
-    .bgimg-2,
-    .bgimg-3 {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    /* First image (Logo. Full height) */
-    .bgimg-1 {
-        background-image: url('./v2/images/medical-informatics-1600feature.jpeg');
-        min-height: 100%;
-    }
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/vendor.css">
 
-    /* Second image (Portfolio) */
-    .bgimg-2 {
-        background-image: url("v2/images/health_information_1000x500.jpeg");
-        min-height: 400px;
-    }
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
 
-    /* Third image (Contact) */
-    .bgimg-3 {
-        background-image: url("v2/images/contact_bg.jpeg");
-        min-height: 400px;
-    }
+    <!-- favicons
+     ================================================== -->
+    <link rel="icon" type="image/png" href="favicon_io/favicon.ico">
 
-    .w3-wide {
-        letter-spacing: 10px;
-    }
+</head>
 
-    .w3-hover-opacity {
-        cursor: pointer;
-    }
+<body id="top">
 
-    /* Turn off parallax scrolling for tablets and phones */
-    @media only screen and (max-device-width: 1600px) {
+<!-- header
+================================================== -->
+<header>
+    <div>
 
-        .bgimg-1,
-        .bgimg-2,
-        .bgimg-3 {
-            background-attachment: scroll;
-            min-height: 400px;
-        }
-    }
-</style>
+        <div class="top-bar">
+            <a class="menu-toggle" href="#"><span>Menu</span></a>
 
-<body>
-
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar" id="myNavbar">
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="#home" class="w3-bar-item w3-button">HOME</a>
-            <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-                <i class="fa fa-search"></i>
-            </a>
-        </div>
-
-
-
-
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-        </div>
-    </div>
-
-    <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span
-                    class="w3-hide-small">CLINICAL</span> JOURNEY</span>
-        </div>
-    </div>
-
-    <!-- Container (About Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="about">
-        <h3 class="w3-center">ABOUT ME</h3>
-        <p class="w3-center"><em>Clinician studying health informatics</em></p>
-        <p>This page is about my personal journey as a registered nurse studying in the field of health informatics at the University of Toronto.</p>
-        <div class="w3-row">
-            <div class="w3-col m6 w3-center w3-padding-large">
-                <p><b><i class="fa fa-user w3-margin-right"></i>Wendy Jiang</b></p><br>
-                <img src="v2/images/profile.jpeg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
-                    width="500" height="333">
+            <div class="logo">
+                <a href="index.html">Menu</a>
             </div>
 
-            <!-- Hide this text on small devices -->
-            <div class="w3-col m6 w3-hide-small w3-padding-large">
-                <p><br>Welcome to my website! I graduated from Ryerson University with a Bachelor of Science in Nursing and a Minor in Psychology.</br>
-                   <br>I am curerntly practicing as a registered nurse at Toronto Western Hospital and St Michael's Hospital, specialized in Cardiology, Cardiovascular and Medicine. </br>
+            <nav id="main-nav-wrap">
+                <ul class="main-navigation">
+                    <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="">About</a></li>
+                    <li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
+                    <li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
+                    <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
+                </ul>
+            </nav>
+        </div> <!-- /top-bar -->
 
+    </div> <!-- /row -->
+</header> <!-- /header -->
 
-                <br>I am excited about the field of health informatics just in terms of making healthcare function more efficiently, as I see many painpoints in the healthcare system and just want to come up with innovative solutions. </br>
-                <br>I welcome you in joining my journey to become an advocate, educator, and promotor in bridging the gaps in healthcare. </br></p>
-            </div>
-        </div>
-        <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-        <p class="w3-wide"><i class="fa fa-th"></i>Collaboration</p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-        </div>
-        <p class="w3-wide"><i class="fa fa-bars"></i>Efficiency</p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
-        </div>
-        <p class="w3-wide"><i class="fa fa-arrow-up"></i>Communication</p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-        </div>
-    </div>
+<!-- intro section
+================================================== -->
+<section id="intro">
 
-    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">6+</span><br>
-            Positions
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">15+</span><br>
-            Awards
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">30+</span><br>
-            Certifications
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">150+</span><br>
-            Meetings
-        </div>
-    </div>
+    <div class="intro-overlay"></div>
 
-    <!-- Second Parallax Image with Portfolio Text -->
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
-              <div class="w3-display-middle">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">PORTFOLIO<span
-                    class="w3-hide-small"></span></span>
-        </div>
-    </div>
+    <div class="intro-content">
+        <div class="row">
 
+            <div class="col-twelve">
 
-    <!-- Container (Portfolio Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="portfolio">
-        <h3 class="w3-center">MY EXPERIENCES</h3>
-        <p class="w3-center"><em>Here are some of my clinical and life experiences!<br> Click on the images!</em></p><br>
+                <h5>Hello, World.</h5>
+                <h1>I'm Wendy Jiang.</h1>
 
-        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-        <div class="w3-row-padding w3-center">
-            <div class="w3-col m3">
-                <img src="v2/images/portfolio/experience/st_michael_hospital.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" title="Registered Nurse at St.Michael's Hospital - Cardiovascular Surgery">
+                <p class="intro-position">
+                    <span>Registered Nurse</span>
+                    <span>Master of Health Informatics Candidate</span>
+                    <span>Dancer at THECREW</span>
+                </p>
+
+                <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
             </div>
 
+        </div>
+    </div> <!-- /intro-content -->
 
-            <div class="w3-col m3">
-                <img src="v2/images/portfolio/experience/epic_sign.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                    title="EPIC elbow support for Mackenzie Health Hospital and The Hospital for Sick Children">
+    <ul class="intro-social">
+        <li><a href="https://www.facebook.com/wendy.jiang.14"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/wendy-jingyi-jiang/"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/wendyjianng/?hl=en"><i class="fa fa-instagram"></i></a></li>
+    </ul> <!-- /intro-social -->
+
+</section> <!-- /intro -->
+
+
+<!-- about section
+================================================== -->
+<section id="about">
+
+    <div class="row section-intro">
+        <div class="col-twelve">
+
+            <h5>About</h5>
+            <h1>Let me introduce myself.</h1>
+
+            <div class="intro-info">
+
+                <img src="images/profile-pic.jpg" alt="Profile Picture">
+
+                <p class="lead">I graduated from Ryerson University with a Bachelor of Science in Nursing and a Minor in
+                    Psychology. I am curerntly practicing as a registered nurse at Toronto Western Hospital and St
+                    Michael's Hospital, specialized in Cardiology, Cardiovascular and Medicine.</p>
             </div>
 
-            <div class="w3-col m3">
-                <img src="v2/images/portfolio/experience/language.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                    title="Working knowledge in six different languages + some fundamental knowledge in certain programming languages (Python, SQL, SAS and more to come!)">
-            </div>
+        </div>
+    </div> <!-- /section-intro -->
 
-             <div class="w3-col m3">
-                <img src="v2/images/portfolio/experience/fotosearch-k2519628-60.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                    title="Venipuncture = blood draw! (one of my favourite nursing skills that does not get taught in school)">
-            </div>
+    <div class="row about-content">
+
+        <div class="col-six tab-full">
+
+            <h3>Profile</h3>
+            <p>I am excited about the field of health informatics just in terms of making healthcare function more
+                efficiently, as I see many painpoints in the healthcare system and just want to come up with innovative
+                solutions. I welcome you in joining my journey to become an advocate, educator, and promotor in bridging
+                the gaps in healthcare.</p>
+
+            <ul class="info-list">
+                <li>
+                    <strong>Job:</strong>
+                    <span>Registered Nurse, Student of Health Informatics</span>
+                </li>
+                <li>
+                    <strong>Website:</strong>
+                    <span>https://wendyjingyijiang.github.io/</span>
+                </li>
+                <li>
+                    <strong>Email:</strong>
+                    <span>wendyjig333@gmail.com</span>
+                </li>
+
+            </ul> <!-- /info-list -->
+
         </div>
 
-        <div class="w3-row-padding w3-center w3-section">
-            <div class="w3-col m3">
-                <img src="v2/images/portfolio/experience/ecg.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" title="Interpretating the ECG as a clinician specialized in cardiology medicine">
-            </div>
+        <div class="col-six tab-full">
 
-            <div class="w3-col m3">
-                <img src="v2/images/portfolio/experience/Ryerson_ELS.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                    title="Facilitator at the Ryerson English Language Support - Ryerson University Work-Study position">
-            </div>
+            <h3>Skills</h3>
+            <ul class="skill-bars">
+                <li>
+                    <div class="progress percent90"><span>90%</span></div>
+                    <strong>Management</strong>
+                </li>
+                <li>
+                    <div class="progress percent85"><span>85%</span></div>
+                    <strong>Leadership</strong>
+                </li>
+                <li>
+                    <div class="progress percent70"><span>70%</span></div>
+                    <strong>Healthcare IT</strong>
+                </li>
+                <li>
+                    <div class="progress percent95"><span>80%</span></div>
+                    <strong>Efficiency</strong>
+                </li>
+                <li>
 
-            <div class="w3-col m3">
-                <img src="v2/images/portfolio/experience/michener_UHN.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                    title="Registered Nurse at Toronto Western Hospital with Acute Care Nursing Certificate from the michener_UHN - Cardiology and General Internal Medicine">
-            </div>
+                    <div class="progress percent75"><span>85%</span></div>
+                    <strong>Communication</strong>
+                </li>
 
-            <div class="w3-col m3">
-                <img src="v2/images/portfolio/experience/DCR.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                    title="Co-chair at Diabetes Canada at Ryerson">
-            </div>
-            </div>
-        <div class="w3-center">
-            <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px"><a href=https://www.linkedin.com/in/wendy-jingyi-jiang>LOAD MORE</a></button>
+            </ul> <!-- /skill-bars -->
+
         </div>
 
     </div>
 
-    <!-- Modal for full size images on click-->
-    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
-                class="fa fa-remove"></i></span>
-        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-            <img id="img01" class="w3-image">
-            <p id="caption" class="w3-opacity w3-large"></p>
+
+</section> <!-- /process-->
+
+
+<!-- resume Section
+================================================== -->
+<section id="resume" class="grey-section">
+
+    <div class="row section-intro">
+        <div class="col-twelve">
+
+            <h5>Resume</h5>
+            <h1>More of my experiences.</h1>
+
+            <p class="lead">My personal journey as a registered nurse studying in the field of health informatics at the
+                University of Toronto.</p>
+
         </div>
-    </div>
+    </div> <!-- /section-intro-->
 
-    <!-- Third Parallax Image with Portfolio Text -->
-    <div class="bgimg-3 w3-display-container w3-opacity-min">
-              <div class="w3-display-middle">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">CONTACT<span
-                    class="w3-hide-small"></span></span>
-        </div>
-            </div>
+    <div class="row resume-timeline">
 
+        <div class="col-twelve resume-header">
 
-    <!-- Container (Contact Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="contact">
-        <h3 class="w3-center">LEAVE ME A MESSAGE</h3>
-        <p class="w3-center"><em>Would love for you to reach out to me!</em></p>
-        <div class="w3-row w3-padding-32 w3-section">
-            <div class="w3-col m4 w3-container">
-                  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="wendy-jingyi-jiang" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/wendy-jingyi-jiang?trk=profile-badge"></a></div>
-       </div>
-            <div class="w3-col m7 w3-panel">
-                <div class="w3-large w3-margin-bottom">
-                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Toronto, Canada<br>
-                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 647-625-5670<br>
-                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: wendyjig333@gmail.com<br>
-                </div>
-                <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-                <form action="/action_page.php" target="_blank">
-                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                        <div class="w3-half">
-                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                        </div>
-                        <div class="w3-half">
-                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-                        </div>
+            <h2>Work Experience</h2>
+
+        </div> <!-- /resume-header -->
+
+        <div class="col-twelve">
+
+            <div class="timeline-wrap">
+
+                <div class="timeline-block">
+
+                    <div class="timeline-ico">
+                        <i class="fa fa-hospital-o"></i>
                     </div>
-                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                    <button class="w3-button w3-black w3-right w3-section" type="submit">
-                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                    </button>
-                </form>
+
+                    <div class="timeline-header">
+                        <h3>Registered Nurse</h3>
+                        <p>Sep 2019 – Present</p>
+                    </div>
+
+                    <div class="timeline-content">
+                        <h4>University Health Network Permanent Part-time</h4>
+                        <p>
+                            Cardiology/General Internal Medicine. <br>
+                            Acute Care Unit/Cath Lab <br>
+                            Flu-Vaccination Nurse <br>
+                            Redeployed to the COVID inpatient unit/ICU/ED as resource nurse
+                        </p>
+                    </div>
+
+                </div> <!-- /timeline-block -->
+
+                <div class="timeline-block">
+
+                    <div class="timeline-ico">
+                        <i class="fa fa-hospital-o"></i>
+                    </div>
+
+                    <div class="timeline-header">
+                        <h3>Registered Nurse</h3>
+                        <p>Mar 2021 – Present</p>
+                    </div>
+
+                    <div class="timeline-content">
+                        <h4>St. Michael's Hospital Permanent Part-time</h4>
+                        <p>Cardiac Vascular Surgery/Cardiology</p>
+                    </div>
+
+                </div> <!-- /timeline-block -->
+
+                <div class="timeline-block">
+                    <div class="timeline-ico">
+                        <i class="fa fa-cutlery"></i>
+                    </div>
+                    <div class="timeline-header">
+                        <h3>Server</h3>
+                        <p>Apr 2018 – Present</p>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Kinka Family Contract Part-time</h4>
+                        <p>Serving happiness and offer excellent dining experiences for customers<br>
+                            Server/Hostess/Bartender/POS administrator<br>
+                            Kinka Family: Kinka Izakaya (2018-2020)/Jabistro (2020-present)</p>
+                    </div>
+                </div> <!-- /timeline-block -->
+
+                <div class="timeline-block">
+                    <div class="timeline-ico">
+                        <i class="fa fa-language"></i>
+                    </div>
+                    <div class="timeline-header">
+                        <h3>English Language Facilitator</h3>
+                        <p>Sep 2016 – Apr 2019</p>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Ryerson University</h4>
+                        <p>Writing support<br>
+                            Oral presentation/Test-taking<br>
+                            Lead peaking and group conversations
+                        </p>
+                    </div>
+                </div> <!-- /timeline-block -->
+
+                <div class="timeline-block">
+                    <div class="timeline-ico">
+                        <i class="fa fa-hospital-o"></i>
+                    </div>
+                    <div class="timeline-header">
+                        <h3>EMR support</h3>
+                        <p>Apr 2018 – Jul 2018</p>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>The Hospital for Sick Children</h4>
+                        <p>EPIC - clinical informatic transformation elbow support for outpatient application</p>
+                    </div>
+                </div> <!-- /timeline-block -->
+
+                <div class="timeline-block">
+                    <div class="timeline-ico">
+                        <i class="fa fa-hospital-o"></i>
+                    </div>
+                    <div class="timeline-header">
+                        <h3>EMR support</h3>
+                        <p>May 2017 – Aug 2017</p>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Mackenzie Health</h4>
+                        <p>EPIC - clinical informatic transformation elbow support for inpatient application</p>
+                    </div>
+                </div> <!-- /timeline-block -->
+
+            </div> <!-- /timeline-wrap -->
+
+        </div> <!-- /col-twelve -->
+
+    </div> <!-- /resume-timeline -->
+
+    <div class="row resume-timeline">
+
+        <div class="col-twelve resume-header">
+
+            <h2>Education</h2>
+
+        </div> <!-- /resume-header -->
+
+        <div class="col-twelve">
+
+            <div class="timeline-wrap">
+
+                <div class="timeline-block">
+
+                    <div class="timeline-ico">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="timeline-header">
+                        <h3>Master Degree</h3>
+                        <p>2021 - Present</p>
+                    </div>
+
+                    <div class="timeline-content">
+                        <h4>University of Toronto</h4>
+                        <p>Health Informatics, Public Health</p>
+                    </div>
+
+                </div> <!-- /timeline-block -->
+
+                <div class="timeline-block">
+
+                    <div class="timeline-ico">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="timeline-header">
+                        <h3>Bachelor Degree</h3>
+                        <p>2015 - 2019</p>
+                    </div>
+
+                    <div class="timeline-content">
+                        <h4>Ryerson University</h4>
+                        <p>Science in Nursing, Minor in Psychology, Dean's List Recipient</p>
+                    </div>
+
+                </div> <!-- /timeline-block -->
+            </div> <!-- /timeline-wrap -->
+
+        </div> <!-- /col-twelve -->
+
+    </div> <!-- /resume-timeline -->
+
+    <div class="row resume-timeline">
+
+        <div class="col-twelve resume-header">
+
+            <h2>Research</h2>
+
+        </div> <!-- /resume-header -->
+
+        <div class="col-twelve">
+
+            <div class="timeline-wrap">
+
+                <div class="timeline-block">
+
+                    <div class="timeline-ico">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+
+
+                    <div class="timeline-header">
+                        <h3>Research Assistant</h3>
+                        <p>Aug 2020 – Jan 2021</p>
+                    </div>
+
+                    <div class="timeline-content">
+                        <h4>Ryerson University</h4>
+                        <p>Exploring the emotional and psychological experiences of nurses working in acute care
+                            COVID-19+ hospital environments: A mixed method study <br>
+                            - Supervisor: Dr. Jennifer Lapum, Daphne Cockwell School of Nursing</p>
+                    </div>
+
+                </div> <!-- /timeline-block -->
+
+                <div class="timeline-block">
+
+                    <div class="timeline-ico">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="timeline-header">
+                        <h3>Research Assistant</h3>
+                        <p>Mar 2018 – Sep 2019</p>
+                    </div>
+
+                    <div class="timeline-content">
+                        <h4>Ryerson University</h4>
+                        <p>- Conduct literature review through data screening and extraction, as well as organize
+                            application documents for submission of Research Ethics Board protocol <br>
+                            - Chosen as a research project poster presentation for the Sigma's 30th International
+                            Nursing Research Congress <br>
+                            - Supervisor: Dr. Charlotte Lee, Daphne Cockwell School of Nursing
+                        </p>
+                    </div>
+
+                </div> <!-- /timeline-block -->
+            </div> <!-- /timeline-wrap -->
+
+        </div> <!-- /col-twelve -->
+
+    </div> <!-- /resume-timeline -->
+
+</section> <!-- /features -->
+
+
+<!-- Portfolio Section
+================================================== -->
+<section id="portfolio">
+
+    <div class="row section-intro">
+        <div class="col-twelve">
+
+            <h5>Portfolio</h5>
+            <h1>Check Out my Clinical and Life Experiences!</h1>
+        </div>
+    </div> <!-- /section-intro-->
+
+    <div class="row portfolio-content">
+
+        <div class="col-twelve">
+
+            <!-- portfolio-wrapper -->
+            <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/experience/st_michael_hospital.jpeg"
+                             alt="Registered Nurse at St.Michael's Hospital - Cardiovascular Surgery">
+                        <a href="#modal-01" class="overlay">
+                            <div class="folio-item-table">
+                                <div class="folio-item-cell">
+                                    <h3 class="folio-title">Registered Nurse</h3>
+                                    <span class="folio-types">
+		     					       	  Registered Nurse at St.Michael's Hospital - Cardiovascular Surgery
+		     					       </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/experience/ecg.jpeg" alt="ECG">
+                        <a href="#modal-02" class="overlay">
+                            <div class="folio-item-table">
+                                <div class="folio-item-cell">
+                                    <h3 class="folio-title">ECG in Cardiology Medicine </h3>
+                                    <span class="folio-types">
+		     					       	  Interpretating the ECG as a clinician specialized in cardiology medicine
+		     					      </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/experience/epic_sign.png" alt="Epic">
+                        <a href="#modal-03" class="overlay">
+                            <div class="folio-item-table">
+                                <div class="folio-item-cell">
+                                    <h3 class="folio-title">Epic</h3>
+                                    <span class="folio-types">
+		     					       	  EPIC elbow support for Mackenzie Health Hospital and The Hospital for Sick Children
+		     					      </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/experience/Ryerson_ELS.jpeg" alt="Language Support">
+                        <a href="#modal-04" class="overlay">
+                            <div class="folio-item-table">
+                                <div class="folio-item-cell">
+                                    <h3 class="folio-title">Language Support</h3>
+                                    <span class="folio-types">
+		     					       	  Facilitator at the Ryerson English Language Support - Ryerson University Work-Study position
+		     					      </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/experience/language.jpeg" alt="Language Expert">
+                        <a href="#modal-05" class="overlay">
+                            <div class="folio-item-table">
+                                <div class="folio-item-cell">
+                                    <h3 class="folio-title">Language Expert</h3>
+                                    <span class="folio-types">
+		     					       	  Working knowledge in six different languages + some fundamental knowledge in certain programming languages (Python, SQL, SAS and more to come!)
+		     					      </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/experience/fotosearch-k2519628-60.jpeg" alt="Venipuncture">
+                        <a href="#modal-06" class="overlay">
+                            <div class="folio-item-table">
+                                <div class="folio-item-cell">
+                                    <h3 class="folio-title">Venipuncture</h3>
+                                    <span class="folio-types">Venipuncture = blood draw! (one of my favourite nursing skills that does not get taught in school)
+		     					      </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/experience/DCR.png" alt="Co-chair">
+                        <a href="#modal-07" class="overlay">
+                            <div class="folio-item-table">
+                                <div class="folio-item-cell">
+                                    <h3 class="folio-title">Co-chair</h3>
+                                    <span class="folio-types">
+		     					       	  Co-chair at Diabetes Canada at Ryerson
+		     					      </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/experience/michener_UHN.jpeg" alt="UHN">
+                        <a href="#modal-08" class="overlay">
+                            <div class="folio-item-table">
+                                <div class="folio-item-cell">
+                                    <h3 class="folio-title">Registered Nurse</h3>
+                                    <span class="folio-types">
+		     					       	  Registered Nurse at Toronto Western Hospital with Acute Care Nursing Certificate from the michener_UHN - Cardiology and General Internal Medicine
+		     					      </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- /folio-item -->
+
+                <!-- modal popups - begin
+                ============================================================= -->
+                <div id="modal-01" class="popup-modal slider mfp-hide">
+
+                    <div class="media">
+                        <img src="images/portfolio/experience/st_michael_hospital.jpeg" alt=""/>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>Registered Nurse</h4>
+                        <p>Registered Nurse at St.Michael's Hospital - Cardiovascular Surgery</p>
+
+                    </div>
+
+
+                </div> <!-- /modal-01 -->
+
+                <div id="modal-02" class="popup-modal slider mfp-hide">
+
+                    <div class="media">
+                        <img src="images/portfolio/experience/ecg.jpeg" alt=""/>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>ECG in Cardiology Medicine</h4>
+                        <p>Interpretating the ECG as a clinician specialized in cardiology medicine</p>
+                    </div>
+
+
+                </div> <!-- /modal-02 -->
+
+                <div id="modal-03" class="popup-modal slider mfp-hide">
+
+                    <div class="media">
+                        <img src="images/portfolio/experience/epic_sign.png" alt=""/>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>Epic</h4>
+                        <p>EPIC elbow support for Mackenzie Health Hospital and The Hospital for Sick Children.</p>
+
+                    </div>
+
+
+                </div> <!-- /modal-03 -->
+
+                <div id="modal-04" class="popup-modal slider mfp-hide">
+
+                    <div class="media">
+                        <img src="images/portfolio/experience/Ryerson_ELS.jpeg" alt=""/>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>Language Support</h4>
+                        <p>Facilitator at the Ryerson English Language Support - Ryerson University Work-Study position</p>
+
+
+                    </div>
+
+
+                </div> <!-- /modal-04 -->
+
+                <div id="modal-05" class="popup-modal slider mfp-hide">
+
+                    <div class="media">
+                        <img src="images/portfolio/experience/language.jpeg" alt=""/>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>Language Expert</h4>
+                        <p>Working knowledge in six different languages + some fundamental knowledge in certain programming languages (Python, SQL, SAS and more to come!)</p>
+                    </div>
+
+                </div> <!-- /modal-05 -->
+
+                <div id="modal-06" class="popup-modal slider mfp-hide">
+
+                    <div class="media">
+                        <img src="images/portfolio/experience/fotosearch-k2519628-60.jpeg" alt=""/>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>Venipuncture</h4>
+                        <p>Venipuncture = blood draw! (one of my favourite nursing skills that does not get taught in school)</p>
+                    </div>
+
+                </div> <!-- /modal-06 -->
+
+                <div id="modal-07" class="popup-modal slider mfp-hide">
+
+                    <div class="media">
+                        <img src="images/portfolio/experience/DCR.png" alt=""/>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>Co-chair</h4>
+                        <p>Co-chair at Diabetes Canada at Ryerson</p>
+                    </div>
+
+                </div> <!-- /modal-07 -->
+
+                <div id="modal-08" class="popup-modal slider mfp-hide">
+
+                    <div class="media">
+                        <img src="images/portfolio/experience/michener_UHN.jpeg" alt=""/>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>Registered Nurse</h4>
+                        <p>Registered Nurse at Toronto Western Hospital with Acute Care Nursing Certificate from the michener_UHN - Cardiology and General Internal Medicine</p>
+                    </div>
+
+                </div> <!-- /modal-08 -->
+
+
+                <!-- modal popups - end
+             ============================================================= -->
+
+            </div> <!-- /portfolio-wrapper -->
+
+        </div>  <!-- /twelve -->
+
+    </div> <!-- /portfolio-content -->
+
+</section> <!-- /portfolio -->
+
+<!-- stats Section
+================================================== -->
+<section id="stats" class="count-up">
+
+    <div class="row">
+        <div class="col-twelve">
+
+            <div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
+
+                <div class="bgrid stat">
+
+                    <div class="icon-part">
+                        <i class="fa fa-building"></i>
+                    </div>
+
+                    <h3 class="stat-count">8</h3>
+
+                    <h5 class="stat-title">
+                        Organizations
+                    </h5>
+
+                </div> <!-- /stat -->
+
+                <div class="bgrid stat">
+
+                    <div class="icon-part">
+                        <i class="fa fa-trophy"></i>
+                    </div>
+
+                    <h3 class="stat-count">
+                        15
+                    </h3>
+
+                    <h5 class="stat-title">
+                        Awards
+                    </h5>
+
+                </div> <!-- /stat -->
+
+                <div class="bgrid stat">
+
+                    <div class="icon-part">
+                        <i class="icon-badge"></i>
+                    </div>
+
+                    <h3 class="stat-count">
+                        30
+                    </h3>
+
+                    <h5 class="stat-title">
+                       Certifications
+                    </h5>
+
+                </div> <!-- /stat -->
+
+                <div class="bgrid stat">
+
+                    <div class="icon-part">
+                        <i class="fa fa-calendar-o"></i>
+                    </div>
+
+                    <h3 class="stat-count">
+                        150
+                    </h3>
+
+                    <h5 class="stat-title">
+                        Meetings
+                    </h5>
+
+                </div> <!-- /stat -->
+
+                <div class="bgrid stat">
+
+                    <div class="icon-part">
+                        <i class="fa fa-globe"></i>
+                    </div>
+
+                    <h3 class="stat-count">
+                        6
+                    </h3>
+
+                    <h5 class="stat-title">
+                        Languages
+                    </h5>
+
+                </div> <!-- /stat -->
+
+                <div class="bgrid stat">
+
+                    <div class="icon-part">
+                        <i class="fa fa-users"></i>
+                    </div>
+
+                    <h3 class="stat-count">
+                        10
+                    </h3>
+
+                    <h5 class="stat-title">
+                        Volunteer Experiences
+                    </h5>
+
+                </div> <!-- /stat -->
+
+            </div> <!-- /stats-list -->
+
+        </div> <!-- /twelve -->
+    </div> <!-- /row -->
+
+</section> <!-- /stats -->
+
+
+<!-- contact
+================================================== -->
+<section id="contact">
+
+    <div class="row section-intro">
+        <div class="col-twelve">
+
+            <h5>Contact</h5>
+            <h1>I'd Love To Hear From You.</h1>
+
+            <p class="lead">Swing by for a cup of coffee, or leave me a note on LinkedIn.</p>
+
+        </div>
+    </div> <!-- /section-intro -->
+
+    <div class="row contact-info">
+
+        <div class="col-four tab-full">
+
+            <div class="icon">
+                <i class="icon-pin"></i>
+            </div>
+
+            <h5>Where to find me</h5>
+
+            <p>
+                Toronto, Ontario
+            </p>
+
+        </div>
+
+        <div class="col-four tab-full collapse">
+
+            <div class="icon">
+                <i class="icon-mail"></i>
+            </div>
+
+            <h5>Email Me At</h5>
+
+            <p>wendyjig333@gmail.com</p>
+
+        </div>
+
+        <div class="col-four tab-full">
+
+            <div class="icon">
+                <i class="icon-phone"></i>
+            </div>
+
+            <h5>Call Me At</h5>
+
+            <p>Phone: 647-625-5670</p>
+
+        </div>
+
+    </div> <!-- /contact-info -->
+
+</section> <!-- /contact -->
+
+
+<!-- footer
+================================================== -->
+
+<footer>
+    <div class="row">
+
+        <div class="col-six tab-full pull-right social">
+
+            <ul class="footer-social">
+                <li><a href="https://www.facebook.com/wendy.jiang.14"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/wendy-jingyi-jiang/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/wendyjianng/?hl=en"><i class="fa fa-instagram"></i></a></li>
+            </ul> <!-- /intro-social -->
+
+        </div>
+
+        <div class="col-six tab-full">
+            <div class="copyright">
+                <span>© Copyright 2021.</span>
             </div>
         </div>
-    </div>
 
-<script type = "text/javascript">
-
-/***********************************************
-* Display time of last visit script- by JavaScriptKit.com
-* This notice MUST stay intact for use
-* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and more
-***********************************************/
-
-var days = 730; // days until cookie expires = 2 years.
-var lastvisit=new Object();
-var firstvisitmsg="This is your first visit to this page. Welcome!";
-lastvisit.subsequentvisitmsg="Welcome back visitor! Your last visit was on <b>[displaydate]</b>";
-
-lastvisit.getCookie=function(Name){
-var re=new RegExp(Name+"=[^;]+", "i");
-if (document.cookie.match(re))
-return document.cookie.match(re)[0].split("=")[1];
-return'';
-}
-
-lastvisit.setCookie=function(name, value, days){
-var expireDate = new Date();
-
-var expstring=expireDate.setDate(expireDate.getDate()+parseInt(days));
-document.cookie = name+"="+value+"; expires="+expireDate.toGMTString()+"; path=/";
-}
-
-lastvisit.showmessage = function() {
-var wh = new Date();
-if (lastvisit.getCookie("visitc") == "") {
-lastvisit.setCookie("visitc", wh, days);
-document.write(firstvisitmsg);
-}
-
-else {
-var lv = lastvisit.getCookie("visitc");
-var lvp = Date.parse(lv);
-var now = new Date();
-now.setTime(lvp);
-var day = new Array("Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat");
-var month = new Array ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
-var dd = now.getDate();
-var dy = now.getDay();
-dy = day[dy];
-var mn = now.getMonth();
-mn = month[mn];
-yy = now.getFullYear();
-var hh = now.getHours();
-var ampm = "AM";
-if (hh >= 12) {ampm = "PM"}
-if (hh >12){hh = hh - 12};
-if (hh == 0) {hh = 12}
-if (hh < 10) {hh = "0" + hh};
-var mins = now.getMinutes();
-if (mins < 10) {mins = "0"+ mins}
-var secs = now.getSeconds();
-if (secs < 10) {secs = "0" + secs}
-var dispDate = dy + ", " + mn + " " + dd + ", " + yy + " " + hh + ":" + mins + ":" + secs + " " + ampm
-document.write(lastvisit.subsequentvisitmsg.replace("\[displaydate\]", dispDate))
-}
-
-lastvisit.setCookie("visitc", wh, days);
-
-}
-
-lastvisit.showmessage();
-
-</script>
-
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-            <a href=https://www.facebook.com/wendy.jiang.14><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-            <a href=https://www.instagram.com/wendyjianng/?hl=en><i class="fa fa-instagram w3-hover-opacity"></i></a>
-            <a href=https://www.linkedin.com/in/wendy-jingyi-jiang/><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
         </div>
 
-    </footer>
+    </div> <!-- /row -->
+</footer>
 
-    <script>
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
+<div id="preloader">
+    <div id="loader"></div>
+</div>
 
-        // Change style of navbar on scroll
-        window.onscroll = function () { myFunction() };
-        function myFunction() {
-            var navbar = document.getElementById("myNavbar");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-            } else {
-                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-            }
-        }
-
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function toggleFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-    </script>
-
+<!-- Java Script
+================================================== -->
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 
